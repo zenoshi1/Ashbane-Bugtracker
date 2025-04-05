@@ -1,19 +1,7 @@
 name: Ashbane.org Bugtracker
 description: >
-  Create a bug report to help us improve Ashbane. Please use the search function before submitting a new issue — 
-  duplicates will be deleted. Use the "Get Started" button to begin your report.
-
-  **Author**: zenoshi1  
-  **Discord**: zenoshi1  
-  **Email**: zenoshi@ashbane.org
-
-  **Attribution & License Notice**:  
-  This bug report template is released under the **Creative Commons Attribution-NoDerivs 4.0 International (CC BY-ND 4.0)** license.  
-  You are free to **share, fork, and reuse** this template for any purpose, including commercial use.  
-  However, you **must retain the author credit above unmodified**, and **you may not create derivative versions** of this template without explicit permission.
-
-  License: https://creativecommons.org/licenses/by-nd/4.0/
-
+  description: >
+  Report bugs to help us improve Adhbane.org. Duplicates will be deleted. Author: zenoshi1 (discord). License: CC BY-ND 4.0 – keep author credit unchanged.
 body:
   - type: input
     id: character
