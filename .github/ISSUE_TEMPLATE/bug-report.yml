@@ -107,7 +107,7 @@ body:
   - type: dropdown
     id: level-bracket
     attributes:
-      label: Content Phase:
+      label: Content Phase
       options:
         - Generic
         - 1-20
