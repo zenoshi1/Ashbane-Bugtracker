@@ -72,7 +72,7 @@ body:
   - type: dropdown
     id: ashbane-client
     attributes:
-      label: If you selected "Ashbane.org Client", choose the version:
+      label: If you selected [Ashbane.org Client], choose the version
       options:
         - .torrent client (Ashbane.org)
         - .zip client (Ashbane.org)
@@ -83,7 +83,7 @@ body:
   - type: input
     id: other-server-name
     attributes:
-      label: If you selected "Other Server Client", enter the original server name:
+      label: If you selected [Other Server Client], enter the original server name:
       placeholder: e.g., Firestorm, Warmane, Atlantiss
     validations:
       required: false
@@ -107,7 +107,7 @@ body:
   - type: dropdown
     id: level-bracket
     attributes:
-      label: "Content Phase:"
+      label: Content Phase:
       options:
         - Generic
         - 1-20
