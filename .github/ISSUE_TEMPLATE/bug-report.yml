@@ -1,0 +1,87 @@
+name: Ashbane.org Bugtracker
+description: Create a bug report to help us improve. Before you open a new report, use the search field! Duplicated reports will be deleted! Use this "Get Started" button 👉 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking your time to fill out a bug report. Remember to fill out all fields including the title above. 
+        An issue that is not properly filled out (not followed this form)/duplicated will be closed.
+  - type: dropdown
+    id: client
+    attributes:
+      label: What client do you play on?
+      options:
+      - Full (Clean Download)
+      - Full (From Other Server)
+      - Minimal
+    validations:
+      required: true
+  - type: checkboxes
+    id: faction
+    attributes:
+      label: Faction
+      options:
+      - label: Alliance
+      - label: Horde
+  - type: dropdown
+    id: level-bracket
+    attributes:
+      label: "Content Phase:"
+      options:
+      - Generic
+      - 1-20
+      - 20-40
+      - 40-60
+      - 60-80
+      - 80-85
+  - type: textarea
+    id: current
+    attributes:
+      label: Current Behaviour
+      description: |
+        Describe the bug in detail. Database to link spells, NPCs, quests etc: https://www.wowhead.com/cata
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Blizzlike Behaviour
+      description: |
+        Describe how it should be working without the bug. Link to evidence if possible such as YouTube videos or WoWHead comments from the time.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: |
+        HEADS UP: include sources in your bug report which are relevant to the 7.3.5a game version, 
+        we will close any bug like "X should be changed to Y" reported without sources.
+    validations:
+      required: false
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce the problem
+      description: |
+        Describe precisely how to reproduce the bug so we can fix it or confirm its existence:
+      placeholder: |
+        1. 
+        2. 
+        3. 
+        4.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra Notes
+      description: |
+        Any information that can help the developers to identify and fix the issue should be put here.
+        Examples:
+        Links to items/NPCs/quests from WoWhead/YouTube etc.
+        Images place
+      placeholder: |
+        None
+    validations:
+      required: false
