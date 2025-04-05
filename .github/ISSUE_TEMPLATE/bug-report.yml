@@ -83,7 +83,7 @@ body:
   - type: input
     id: other-server-name
     attributes:
-      label: If you selected [Other Server Client], enter the original server name:
+      label: If you selected [Other Server Client], enter the original server name
       placeholder: e.g., Firestorm, Warmane, Atlantiss
     validations:
       required: false
