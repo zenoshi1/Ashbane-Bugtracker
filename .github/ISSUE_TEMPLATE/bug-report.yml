@@ -1,39 +1,142 @@
 name: Ashbane.org Bugtracker
-description: Create a bug report to help us improve. Before you open a new report, use the search field! Duplicated reports will be deleted! Use this "Get Started" button 👉 
+description: >
+  Create a bug report to help us improve Ashbane. Please use the search function before submitting a new issue — 
+  duplicates will be deleted. Use the "Get Started" button to begin your report.
+
+  **Author**: zenoshi1  
+  **Discord**: zenoshi1  
+  **Email**: zenoshi@ashbane.org
+
+  **Attribution & License Notice**:  
+  This bug report template is released under the **Creative Commons Attribution-NoDerivs 4.0 International (CC BY-ND 4.0)** license.  
+  You are free to **share, fork, and reuse** this template for any purpose, including commercial use.  
+  However, you **must retain the author credit above unmodified**, and **you may not create derivative versions** of this template without explicit permission.
+
+  License: https://creativecommons.org/licenses/by-nd/4.0/
+
 body:
+  - type: input
+    id: character
+    attributes:
+      label: Character Name
+      description: Add your character name
+      placeholder: e.g., Thrallius
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: game-version
+    attributes:
+      label: Game Version / Build Number
+      description: Enter the client build number, if known (e.g. 4.3.4.15595)
+      placeholder: e.g., 4.3.4.15595
+    validations:
+      required: false
+
+  - type: input
+    id: datetime
+    attributes:
+      label: Approximate Date/Time When Issue Occurred
+      placeholder: e.g., 2025-04-05 14:30 Server Time
+    validations:
+      required: false
+
   - type: markdown
     attributes:
       value: |
         Thank you for taking your time to fill out a bug report. Remember to fill out all fields including the title above. 
         An issue that is not properly filled out (not followed this form)/duplicated will be closed.
+
   - type: dropdown
-    id: client
+    id: client-type
     attributes:
       label: What client do you play on?
       options:
-      - Full (Clean Download)
-      - Full (From Other Server)
-      - Minimal
+        - Ashbane.org Client
+        - Other Server Client
     validations:
       required: true
+
+  - type: dropdown
+    id: ashbane-client
+    attributes:
+      label: If you selected "Ashbane.org Client", choose the version:
+      options:
+        - .torrent client (Ashbane.org)
+        - .zip client (Ashbane.org)
+        - Minimal client (Ashbane.org)
+    validations:
+      required: false
+
+  - type: input
+    id: other-server-name
+    attributes:
+      label: If you selected "Other Server Client", enter the original server name:
+      placeholder: e.g., Firestorm, Warmane, Atlantiss
+    validations:
+      required: false
+
+  - type: input
+    id: other-server-link
+    attributes:
+      label: Link to the client download (if available)
+      placeholder: https://example-server.org/download
+    validations:
+      required: false
+
   - type: checkboxes
     id: faction
     attributes:
       label: Faction
       options:
-      - label: Alliance
-      - label: Horde
+        - label: Alliance
+        - label: Horde
+
   - type: dropdown
     id: level-bracket
     attributes:
       label: "Content Phase:"
       options:
-      - Generic
-      - 1-20
-      - 20-40
-      - 40-60
-      - 60-80
-      - 80-85
+        - Generic
+        - 1-20
+        - 20-40
+        - 40-60
+        - 60-80
+        - 80-85
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity of the Bug
+      options:
+        - Critical (Game-breaking / Exploit)
+        - Major (Affects gameplay significantly)
+        - Moderate (Annoying but not game-breaking)
+        - Minor (Cosmetic or minor inconvenience)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: reproducibility
+    attributes:
+      label: Is this issue consistently reproducible?
+      options:
+        - label: Yes, happens every time
+        - label: Sometimes
+        - label: No, it happened once
+
   - type: textarea
     id: current
     attributes:
@@ -42,6 +145,7 @@ body:
         Describe the bug in detail. Database to link spells, NPCs, quests etc: https://www.wowhead.com/cata
     validations:
       required: true
+
   - type: textarea
     id: expected
     attributes:
@@ -50,15 +154,17 @@ body:
         Describe how it should be working without the bug. Link to evidence if possible such as YouTube videos or WoWHead comments from the time.
     validations:
       required: true
+
   - type: textarea
     id: source
     attributes:
       label: Source
       description: |
-        HEADS UP: include sources in your bug report which are relevant to the 7.3.5a game version, 
+        HEADS UP: include sources in your bug report which are relevant to the **Cataclysm 4.3.4 (Build 15595)** game version, 
         we will close any bug like "X should be changed to Y" reported without sources.
     validations:
       required: false
+
   - type: textarea
     id: reproduce
     attributes:
@@ -72,6 +178,7 @@ body:
         4.
     validations:
       required: true
+
   - type: textarea
     id: extra
     attributes:
@@ -85,3 +192,9 @@ body:
         None
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Attachments:**  
+        If applicable, please include screenshots or video evidence in the comments after submitting the report. This helps us validate issues more quickly.
